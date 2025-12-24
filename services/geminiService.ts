@@ -1,12 +1,14 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.API_KEY || process.env.GEMINI_API_KEY;
+const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 /**
  * Uses Gemini to polish a raw user inquiry into a professional business email format.
  */
 export const polishInquiry = async (rawText: string): Promise<string> => {
   if (!rawText || rawText.length < 5) return rawText;
+  if (!ai) return rawText; // APIキーがない場合はそのまま返す
 
   try {
     const response = await ai.models.generateContent({
