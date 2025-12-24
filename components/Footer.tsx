@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-champagne-100 py-20 border-t border-slate-800">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="md:col-span-1">
              <div className="flex items-center gap-2 mb-6 text-champagne-400">
                 <div className="w-6 h-6 border border-current rotate-45 flex items-center justify-center">
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                ブランドの価値を高める。
              </p>
           </div>
-          
+
           <div>
             <h4 className="text-white font-serif text-lg mb-6">Explore</h4>
             <ul className="space-y-3 text-sm text-slate-400">
@@ -26,15 +26,6 @@ const Footer: React.FC = () => {
               <li><a href="#services" className="hover:text-champagne-400 transition-colors">Services</a></li>
               <li><a href="#process" className="hover:text-champagne-400 transition-colors">Process</a></li>
               <li><a href="#news" className="hover:text-champagne-400 transition-colors">News</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-serif text-lg mb-6">Legal</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-champagne-400 transition-colors">プライバシーポリシー</a></li>
-              <li><a href="#" className="hover:text-champagne-400 transition-colors">利用規約</a></li>
-              <li><a href="#" className="hover:text-champagne-400 transition-colors">特定商取引法に基づく表記</a></li>
             </ul>
           </div>
 
